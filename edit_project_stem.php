@@ -346,9 +346,9 @@
                                                 <label class="col-form-label col-md-2">คำนำหน้า</label>
                                                 <div class="col-md-2">
                                                     <select class="form-control" name="p_fname_t">
-                                                    <option><?php echo $fetch['p_fname_t'] ?></option>
-                                                        <option value="นางสาว">นาง</option>
-                                                        <option value="เด็กชาย">นางสาว</option>
+                                                        <option><?php echo $fetch['p_fname_t'] ?></option>
+                                                        <option value="นาง">นาง</option>
+                                                        <option value="นางสาว">นางสาว</option>
                                                         <option value="นาย">นาย</option>
                                                      
 

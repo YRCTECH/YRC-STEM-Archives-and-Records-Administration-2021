@@ -35,7 +35,7 @@
                       <div class="col-12">
                           <div class="card">
                               <div class="card-body">
-                                    <h4>บริหารจัดการ-รายงานโครงงาน ในงาน THE 1ST NATIONAL BASIC STEM INNOVATION E-FORUM 2021</h4>
+                                    <h4>ตรวจสอบไฟล์โครงงาน ในงาน THE 1ST NATIONAL BASIC STEM INNOVATION E-FORUM 2021</h4>
                                     <hr>
                                     <div class="table-responsive">
                                         <table id="zero_config" class="table table-striped table-bordered">
@@ -46,6 +46,7 @@
                                                     <th>สาขา</th>
                                                     <th width="250px">สมาชิก/ครูที่ปรึกษา</th>
                                                     <th width="150px" class="text-center">ตรวจสอบไฟล์</th>
+                                                   
                                                     
                                                    
                                                 </tr>
@@ -91,11 +92,8 @@
                                                             while($fetch_f = mysqli_fetch_array($query_file)){
 
                                                         ?>
-                                                            <?php if($fetch_f['f_proposal'] == '' || $fetch_f['f_poster'] == '' || $fetch_f['f_poster'] == '') {?>
-                                                                <a href="#" class="btn btn-danger w-100"><i class="fas fa-times"></i> ยังไม่ได้อัปโหลดไฟล์</a>
-                                                            <?php }else{?>
+                                                            <?php if($fetch_f['f_proposal'] != '' || $fetch_f['f_poster'] != '' || $fetch_f['f_poster'] != '') {?>
                                                                 <a href="admin_check_project.php?file_id=<?php echo $fetch_f['f_id'] ?>&project_id=<?php echo $fetch_f['f_id_team'] ?>" class="btn btn-primary w-100"><i class="fas fa-search"></i> ตรวจสอบไฟล์</a>
-
                                                                 <?php if($fetch_f['f_status1'] == 'process'){ ?>
                                                                     <p class="mb-1 text-danger">สถานะเอกสาร : <i class="fas fa-clock"></i> รอการตรวจสอบ</p>
                                                                 <?php }else if($fetch_f['f_status1'] == 'unsuccess'){ ?>
@@ -103,7 +101,7 @@
                                                                 <?php }else if($fetch_f['f_status1'] == 'success'){ ?>
                                                                     <p class="mb-1 text-success">สถานะเอกสาร : <i class="fas fa-check"></i> ผ่านการตรวจสอบแล้ว</p>
                                                                 <?php } else{ ?>
-                                                                    <p class="mb-1 text-danger">สถานะเอกสาร : 00</p>
+                                                                    <p class="mb-1 text-danger">สถานะเอกสาร : ไม่พบไฟล์</p>
                                                                 <?php } ?>
 
                                                                 <?php if($fetch_f['f_status2'] == 'process'){ ?>
@@ -113,7 +111,7 @@
                                                                 <?php }else if($fetch_f['f_status2'] == 'success'){ ?>
                                                                     <p class="mb-1 text-success">สถานะโปสเตอร์ : <i class="fas fa-check"></i> ผ่านการตรวจสอบแล้ว</p>
                                                                 <?php } else{ ?>
-                                                                    <p class="mb-1 text-danger">สถานะโปสเตอร์ : 00</p>
+                                                                    <p class="mb-1 text-danger">สถานะโปสเตอร์ : ไม่พบไฟล์</p>
                                                                 <?php } ?>
 
                                                                 <?php if($fetch_f['f_status3'] == 'process'){ ?>
@@ -123,8 +121,13 @@
                                                                 <?php }else if($fetch_f['f_status3'] == 'success'){ ?>
                                                                     <p class="mb-1 text-success">สถานะคลิป : <i class="fas fa-check"></i> ผ่านการตรวจสอบแล้ว</p>
                                                                 <?php } else{ ?>
-                                                                    <p class="mb-1 text-danger">สถานะคลิป : 00</p>
+                                                                    <p class="mb-1 text-danger">สถานะคลิป : ไม่พบไฟล์</p>
                                                                 <?php } ?>
+                                                                
+                                                            <?php }else{?>
+                                                                <a href="#" class="btn btn-danger w-100"><i class="fas fa-times"></i> ยังไม่ได้อัปโหลดไฟล์</a>
+
+                                                                
 
                                                                 
 

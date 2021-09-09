@@ -10,8 +10,8 @@
 
 <style>
     body{
-            background: rgb(240,135,227);
-            background: linear-gradient(90deg, rgba(240,135,227,1) 0%, rgba(246,98,134,1) 100%);
+        background: rgb(240,135,227);
+        background: linear-gradient(90deg, rgba(240,135,227,1) 0%, rgba(246,98,134,1) 100%);
     }
     .login {
         background-image: url("./img/bglogin.jpg");

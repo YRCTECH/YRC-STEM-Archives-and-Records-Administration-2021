@@ -31,8 +31,8 @@
         $p_idstu = filter_input(INPUT_POST , 'p_idstu' , FILTER_SANITIZE_STRING);
 
         
-        $query = "SELECT MAX(p_ref_code) as lastbill FROM project"; 
-        $resultlastbill = mysqli_query($conn, $query); 
+        $sql_ref_code = "SELECT MAX(p_ref_code) as lastbill FROM project"; 
+        $resultlastbill = mysqli_query($conn, $sql_ref_code); 
         $row = mysqli_fetch_array($resultlastbill);
       
         $lastbill = $row['lastbill'];
@@ -55,21 +55,22 @@
                 ";
             $result = mysqli_query($conn ,$sql);
             if($result){
-                $select = "SELECT * FROM project WHERE p_idstu ='$p_idstu'";
-                $query = mysqli_query($conn,$select);
-                $fetch = mysqli_fetch_array($query);
+                $select_data = "SELECT * FROM project WHERE p_idstu ='$p_idstu'";
+                $query_data = mysqli_query($conn,$select_data);
+                $fetch_data = mysqli_fetch_array($query_data);
 
-                $sql_insert = "INSERT INTO `file` (`f_id`, `f_ref`, `f_idstudent`, `f_id_team`) 
-                VALUES (NULL, '$p_ref_code', '$p_idstu', '$fetch[p_id]')";
+                $sql_insert = "INSERT INTO `file` (`f_id`, `f_proposal`, `f_status1` , `f_message1` , `f_poster`, `f_status2` , `f_message2`, `f_clip`, `f_status3` , `f_message3` ,`f_ref`, `f_idstudent`, `f_id_team`) 
+                VALUES (NULL,'','','','','','','','','','$p_ref_code', '$p_idstu', '$fetch_data[p_id]')";
                 $query_insert = mysqli_query($conn,$sql_insert);
+
                 if($query_insert){
                     header('location:../add_project_stem.php?status=success');
                 }else{
-                    header('location:../add_project_stem.php?status=error');
+                    header('location:../add_project_stem.php?status=error2');
                 }
                 
             }else{
-                header('location:../add_project_stem.php?status=error');
+                header('location:../add_project_stem.php?status=error3');
             }
         }
     }

@@ -3,7 +3,7 @@
     include("../connect/connect.php");
     if(isset($_POST['Upload'])){
         $idstudent = filter_input(INPUT_POST , 'idstudent' , FILTER_SANITIZE_STRING);
-        $ref_code = filter_input(INPUT_POST , 'ref_code' , FILTER_SANITIZE_STRING);
+        $ref_code = filter_input(INPUT_POST , 'refcode' , FILTER_SANITIZE_STRING);
         $idteam = filter_input(INPUT_POST , 'idteam' , FILTER_SANITIZE_STRING);
 
         $allowed = array('pdf');
@@ -12,11 +12,12 @@
         if (!in_array($ext, $allowed)) {
             header("location:../add_project_stem.php?status=error");
         }else{
-            $f = 'YRCSTEM-';
+            $f = 'Proposal-YRCSTEM-';
+            $br = '_';
             $temp = explode('.',$_FILES['protosal']['name']);
             $chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
             $uploadDir = "../yrcstem2021/protosal/"; 
-            $fileName = substr(str_shuffle( $chars ), 0, 5 ). '.'.end($temp) ;
+            $fileName = $f.$ref_code.$br.$idstudent. '.'.end($temp) ;
             $uploadFilePath = $uploadDir.$fileName; 
             move_uploaded_file($_FILES['protosal']['tmp_name'], $uploadFilePath);
             

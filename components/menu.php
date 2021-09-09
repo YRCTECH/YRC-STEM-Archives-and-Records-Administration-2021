@@ -51,13 +51,30 @@
                     <li class="nav-small-cap"><i class="mdi mdi-dots-horizontal"></i>
                         <span class="hide-menu">ระบบบริหารจัดการโครงงาน</span>
                     </li>
+
+                    <!-- <li class="sidebar-item">
+                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="admin_result_project.php"
+                            aria-expanded="false">
+                            <i class="mdi mdi-chart-line"></i>
+                            <span class="hide-menu">สารสนเทศโครงงาน</span>
+                        </a>
+                    </li> -->
+
                     <li class="sidebar-item">
                         <a class="sidebar-link waves-effect waves-dark sidebar-link" href="admin_manage_project.php"
                             aria-expanded="false">
-                            <i class="mdi mdi-book-multiple"></i>
-                            <span class="hide-menu">รายงานโครงงาน</span>
+                            <i class="mdi mdi-file"></i>
+                            <span class="hide-menu">ตรวจสอบไฟล์</span>
                         </a>
                     </li>
+
+                    <!-- <li class="sidebar-item">
+                        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="admin_award_project.php"
+                            aria-expanded="false">
+                            <i class="mdi mdi-clipboard-check"></i>
+                            <span class="hide-menu">ตัดสินโครงงาน</span>
+                        </a>
+                    </li> -->
 
                 
 

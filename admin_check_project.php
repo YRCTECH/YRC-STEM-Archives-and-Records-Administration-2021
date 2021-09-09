@@ -75,7 +75,8 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
+                                            
+                                            <tr class="<?php if($fetch['f_proposal'] == ''){ echo 'd-none'; }else{} ?>">
                                                 <td>1. ไฟล์เอกสาร
                                                     <!-- 1 -->
                                                     <?php 
@@ -123,7 +124,8 @@
                                                 </td>
                                             </tr>
 
-                                            <tr>
+                                            <tr class="<?php if($fetch['f_poster'] == ''){ echo 'd-none'; }else{} ?>">
+
                                                 <td>2. ไฟล์โปสเตอร์โครงงาน
                                                     <!-- 2 -->
                                                     <?php 
@@ -138,8 +140,8 @@
                                                         <p class="mb-1 text-danger" style="font-size: 16px;">สถานะ : <i class="fas fa-clock"></i> รอการตรวจสอบ</p>
                                                     <?php } ?>
                                                 </td>
-                                                <td><a href="./yrcstem2021/protosal/<?php echo $fetch['f_proposal'] ?>"
-                                                        target="_blank" class="btn btn-primary w-100 mt-2">ดูโปสเตอร์</a>
+                                                <td>
+                                                    <a href="./yrcstem2021/poster/<?php echo $fetch['f_poster'] ?>"target="_blank" class="btn btn-primary w-100 mt-2">ดูโปสเตอร์</a>
                                                 </td>
                                                 <td>
 
@@ -172,7 +174,7 @@
                                                 </td>
                                             </tr>
 
-                                            <tr>
+                                            <tr class="<?php if($fetch['f_clip'] == ''){ echo 'd-none'; }else{} ?>">
                                                 <td>3. คลิปวีดิโอ
                                                     <!-- 2 -->
                                                     <?php 

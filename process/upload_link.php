@@ -3,7 +3,7 @@
     include("../connect/connect.php");
     if(isset($_POST['Upload'])){
         $idstudent = filter_input(INPUT_POST , 'idstudent' , FILTER_SANITIZE_STRING);
-        $ref_code = filter_input(INPUT_POST , 'ref_code' , FILTER_SANITIZE_STRING);
+        $ref_code = filter_input(INPUT_POST , 'refcode' , FILTER_SANITIZE_STRING);
         $idteam = filter_input(INPUT_POST , 'idteam' , FILTER_SANITIZE_STRING);
         $link = filter_input(INPUT_POST , 'link' , FILTER_SANITIZE_STRING);
 

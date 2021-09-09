@@ -12,11 +12,12 @@
         if (!in_array($ext, $allowed)) {
             header("location:../add_project_stem.php?status=error");
         }else{
-            $f = 'YRCSTEM-';
+            $f = 'Poser-YRCSTEM-';
+            $br = '_';
             $temp = explode('.',$_FILES['poster']['name']);
             $chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
             $uploadDir = "../yrcstem2021/poster/"; 
-            $fileName = substr(str_shuffle( $chars ), 0, 5 ). '.'.end($temp) ;
+            $fileName = $f.$ref_code.$br.$idstudent. '.'.end($temp) ;
             $uploadFilePath = $uploadDir.$fileName; 
             move_uploaded_file($_FILES['poster']['tmp_name'], $uploadFilePath);
             
