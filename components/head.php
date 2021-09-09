@@ -2,7 +2,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YRC STEM Project archives and record 2021 ระบบริหารจัดการข้อมูลโครงงานในการแข่งขัน STEM 2021 </title>
-    <link rel="icon" type="image/png" sizes="16x16" href="./img/logostem.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/logo.png" />
     <link rel="stylesheet" type="text/css" href="./assets/libs/quill/dist/quill.snow.css" />
   
     <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet">
